@@ -21,4 +21,4 @@ var input_arr = [
 // the average of all numbers in exampleArr is 1.3333
 ```
 
-3. 3. Create an Automobile object that has the methods `accelerate` and `brake`, and the properties `topSpeed` (default value: 100) and `turnRadius` (default value: 20). Next, create a Car object that inherits from Automobile but overrides the `topSpeed` property (setting it to 120) and override the `brake` method in such a way that it invokes Automobile’s `brake` method followed by it’s own `skid` method. Create an instance of both Automobile and Car.
+3. Create an Automobile object that has the methods `accelerate` and `brake`, and the properties `topSpeed` (default value: 100) and `turnRadius` (default value: 20). Next, create a Car object that inherits from Automobile but overrides the `topSpeed` property (setting it to 120) and override the `brake` method in such a way that it invokes Automobile’s `brake` method followed by it’s own `skid` method. Create an instance of both Automobile and Car.
