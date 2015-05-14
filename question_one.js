@@ -39,6 +39,12 @@ function id_numbers_please(array){
 	return sorted_array
 }
 
+function sort_objects_with_txt_files(array){
+	var txt_array = txt_files_please(array);
+	var answer = id_numbers_please(txt_array);
+	return answer
+}
+
 var input_arr = [
 	{id: 15, path: 'foo.txt'},
 	{id: -1, path: 'bar.1.txt'},
