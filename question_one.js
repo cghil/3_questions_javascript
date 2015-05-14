@@ -3,13 +3,6 @@
 // with a numerical id and a path that ends in .txt,
 //  sorted in by their id (numerically descending).
 
-var input_arr = [
-	{id: 15, path: 'foo.txt'},
-	{id: -1, path: 'bar.1.txt'},
-	{id: 'undefined', path: null},
-	{id: 3, path: 'mine.txt'},
-	{id: 12.2, path: 'yours.txt.diff'}
-];
 
 function txt_files_please(array){
 	var only_text_files = [];
@@ -23,14 +16,38 @@ function txt_files_please(array){
 	return only_text_files
 }
 
-var output = txt_files_please(input_arr)
-console.log(output)
-
 
 function id_numbers_please(array){
 	var ids = [];
 	array.forEach(function(item){
 		var id = item.id
-		// if ()
+		if(!isNaN(id)){
+			ids.push(id)
+		}
 	})
+	var sorted_ids = ids.sort(function(a, b){
+		return a-b;
+	});
+	var sorted_array = [];
+	sorted_ids.forEach(function(id){
+		array.forEach(function(item){
+			if (id=== item.id){
+				sorted_array.push(item)
+			}
+		})
+	})
+	return sorted_array
 }
+
+var input_arr = [
+	{id: 15, path: 'foo.txt'},
+	{id: -1, path: 'bar.1.txt'},
+	{id: 'undefined', path: null},
+	{id: 3, path: 'mine.txt'},
+	{id: 12.2, path: 'yours.txt.diff'}
+];
+
+var output = sort_objects_with_txt_files(input_arr);
+console.log(output);
+
+
