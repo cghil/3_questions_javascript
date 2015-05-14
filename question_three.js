@@ -11,13 +11,37 @@ function Automobile(topSpeed, turnRadius){
 	};
 }
 
-var car = new Automobile(120)
+var car = new Automobile(120);
 
 car.skid = function(){
 	car.brake();
 }
 
+var anotherCar = new Automobile;
+console.log(anotherCar.topSpeed)
 console.log(car.topSpeed)
 car.skid();
 
+// prototpye inheirtance
 
+var automobile = {
+	topSpeed: 100,
+	turnRadius: 20,
+	brake: function(){
+		console.log('slowing down to stop');
+	},
+	accelerate: function(){
+		console.log('accelerating to a top speed of ' + automobile.topSpeed);
+	}
+
+}
+
+automobile.accelerate();
+var protoCar = {topSpeed: 120}
+protoCar.__proto__ = automobile;
+protoCar.skid = function(){
+	console.log('skidding');
+	protoCar.brake();
+}
+
+protoCar.skid();
