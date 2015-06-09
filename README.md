@@ -22,3 +22,5 @@ var input_arr = [
 ```
 
 3) Create an Automobile object that has the methods `accelerate` and `brake`, and the properties `topSpeed` (default value: 100) and `turnRadius` (default value: 20). Next, create a Car object that inherits from Automobile but overrides the `topSpeed` property (setting it to 120) and override the `brake` method in such a way that it invokes Automobile’s `brake` method followed by it’s own `skid` method. Create an instance of both Automobile and Car.
+
+4) Create a method that reverses a string
