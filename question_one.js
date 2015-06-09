@@ -11,7 +11,7 @@ function txt_files_please(array){
 		var txt = new RegExp(".*\.txt$");
 		if (txt.test(path)){
 			only_text_files.push(item);
-		}
+	 	}
 	})
 	return only_text_files
 }
